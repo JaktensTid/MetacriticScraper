@@ -69,6 +69,7 @@ def get_item(page_content, url):
 		other_platforms = '/'.join(document.xpath("//li[@class='summary_detail product_platforms']//a//text()"))
 		platforms = main_platform + '/' + other_platforms
 		score = document.xpath("//span[@itemprop='ratingValue']//text()")[-1]
+		desc = document.xpath("//span[@itemprop='description']//text()")[-1]
 		if url in to_scrape_again:
 			del to_scrape_again[to_scrape_again.index(url)]
 		return {'url': url,
@@ -79,7 +80,8 @@ def get_item(page_content, url):
 				'date': date,
 				'year': year, 
 				'platforms': platforms,
-				'score': score}
+				'score': score,
+				'desc': desc}
 	except IndexError:
 		print(' - - - RETURNED NONE AT ' + url)
 		return None
