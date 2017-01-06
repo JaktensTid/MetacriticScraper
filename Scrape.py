@@ -25,10 +25,13 @@ async def fetch(url, session):
 		page_content = await response.read()
 		item = get_item(page_content, url)
 		if not item:
-			to_scrape_again.append(url)
+			raise Exception(' - - - ITEM IS NONE')
+		if '429 Slow down' in page_content.decode('utf-8'):
+			raise Exception(' - - - SLOWING DOWN')
 		collection.insert_one(item)
 		total_checked += 1
 		print('Inserted: ' + url + '  - - - Total checked: ' + str(total_checked))
+		return 0
 
 
 async def bound_fetch(sem, url, session):
@@ -37,7 +40,8 @@ async def bound_fetch(sem, url, session):
 			await fetch(url, session)
 	except Exception as e:
 		to_scrape_again.append(url)
-		print('******************* ERROR')
+		print(e)
+		sleep(30)
 
 
 async def run(urls):
