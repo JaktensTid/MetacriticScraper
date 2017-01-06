@@ -17,11 +17,12 @@ def get_html(url):
     global SLOW_DOWN
     try:
         if SLOW_DOWN:
-            sleep(7)
+            sleep(15)
             SLOW_DOWN = False
         html = requests.get(url, headers=headers).content.decode('utf-8')
         if '429 Slow down' in html:
             SLOW_DOWN = True
+            print(' - - - SLOW DOWN')
             raise TimeoutError
         return html
     except TimeoutError:
