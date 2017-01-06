@@ -1,0 +1,20 @@
+{
+	"action":"http://www.metacritic.com/browse/games/genre/metascore/action/all?view=detailed",
+	"adventure":"http://www.metacritic.com/browse/games/genre/metascore/adventure/all?view=detailed",
+	"fighting games":"http://www.metacritic.com/browse/games/genre/metascore/fighting/all?view=detailed",
+	"first-person shooters":"http://www.metacritic.com/browse/games/genre/metascore/first-person/all?view=detailed",
+	"flight/flying":"http://www.metacritic.com/browse/games/genre/metascore/flight/all?view=detailed",
+	"party":"http://www.metacritic.com/browse/games/genre/metascore/party/all?view=detailed",
+	"platformer":"http://www.metacritic.com/browse/games/genre/metascore/platformer/all?view=detailed",
+	"puzzle":"http://www.metacritic.com/browse/games/genre/metascore/puzzle/all?view=detailed",
+	"racing":"http://www.metacritic.com/browse/games/genre/metascore/racing/all?view=detailed",
+	"real-time strategy":"http://www.metacritic.com/browse/games/genre/metascore/real-time/all?view=detailed",
+	"role-playing":"http://www.metacritic.com/browse/games/genre/metascore/role-playing/all?view=detailed",
+	"simulation":"http://www.metacritic.com/browse/games/genre/metascore/simulation/all?view=detailed",
+	"sports":"http://www.metacritic.com/browse/games/genre/metascore/sports/all?view=detailed",
+	"strategy":"http://www.metacritic.com/browse/games/genre/metascore/strategy/all?view=detailed",
+	"third-person shooter":"http://www.metacritic.com/browse/games/genre/metascore/third-person/all?view=detailed",
+	"turn-based strategy":"http://www.metacritic.com/browse/games/genre/metascore/turn-based/all?view=detailed",
+	"wargames":"http://www.metacritic.com/browse/games/genre/metascore/wargame/all?view=detailed",
+	"wrestling":"http://www.metacritic.com/browse/games/genre/metascore/wrestling/all?view=detailed"
+}
