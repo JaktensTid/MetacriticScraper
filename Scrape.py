@@ -92,6 +92,7 @@ def scrape(urls):
 def main():
 	scrape(games_urls)
 	while to_scrape_again:
+		to_scrape_again = list(set(to_scrape_again))
 		sleep(60)
 		scrape(to_scrape_again)
 
