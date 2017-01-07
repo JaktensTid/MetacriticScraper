@@ -6,14 +6,11 @@ from multiprocessing import Pool
 from time import sleep
 import random
 
-#browser = webdriver.PhantomJS(os.path.join(os.path.dirname(__file__), 'bin/phantomjs'))
 domain = 'http://www.metacritic.com/'
-proxies = ['http://' + line.replace('\n', '') for line in open('proxies.txt', 'r')]
 SLOW_DOWN = False
 
 def get_html(url):
     headers = {"User-Agent": "Mozilla/5.001 (windows; U; NT4.0; en-US; rv:1.0) Gecko/25250101"}
-    proxy = {'http': random.choice(proxies)}
     global SLOW_DOWN
     try:
         if SLOW_DOWN:
